@@ -10,6 +10,12 @@ import { artworks } from "@/data/artworks"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
+export function generateStaticParams() {
+  return artworks.map((artwork) => ({
+    id: artwork.id,
+  }))
+}
+
 export default function ArtworkDetailPage() {
   const params = useParams()
   const { language, t } = useLanguage()
