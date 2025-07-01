@@ -1,11 +1,10 @@
 import { useLanguage } from "../contexts/language-context";
 import { artworks } from "../data/artworks";
-import { Button } from "./ui/button";
-import { Card, CardContent, CardFooter } from "./ui/card";
+import { Card, CardContent } from "./ui/card";
 
 
 export function ArtworkGrid() {
-  const { language, t } = useLanguage();
+  const { language } = useLanguage();
 
   return (
     <div className="space-y-12">
@@ -16,17 +15,18 @@ export function ArtworkGrid() {
           className="scroll-mt-8"
           data-artwork-id={artwork.id}
         >
-          <Card className="overflow-hidden hover:shadow-lg transition-shadow max-w-5xl mx-auto">
+          <Card className="overflow-hidden hover:shadow-lg transition-shadow w-full mx-auto">
             <CardContent className="p-0">
-              <div className="relative aspect-[21/9] overflow-hidden">
+              <div className="relative overflow-hidden">
                 <img
                   src={artwork.image || "/placeholder.svg"}
                   alt={artwork.title[language]}
                   className="object-cover hover:scale-105 transition-transform duration-300"
                 />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/100 pointer-events-none w-1/5"></div>
               </div>
             </CardContent>
-            <CardFooter className="p-6">
+            {/* <CardFooter className="p-6">
               <div className="w-full">
                 <h3 className="font-bold text-2xl text-gray-900 mb-2">
                   {artwork.title[language]}
@@ -44,7 +44,7 @@ export function ArtworkGrid() {
                   </Button>
                 </a>
               </div>
-            </CardFooter>
+            </CardFooter> */}
           </Card>
         </div>
       ))}

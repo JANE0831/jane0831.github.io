@@ -18,9 +18,9 @@ export function Sidebar({ activeArtwork }: SidebarProps) {
   }
 
   return (
-    <aside className="w-64 bg-gray-50 border-r border-gray-200 h-screen sticky top-0 overflow-y-auto">
+    <aside className="w-64 bg-transparent h-screen sticky top-0 overflow-y-auto z-2">
       <div className="p-6">
-        <h2 className="text-lg font-semibold text-gray-900 mb-4">{t("artworks")}</h2>
+        {/* <h2 className="text-lg font-semibold text-red-400 mb-4">{t("artworks")}</h2> */}
 
         <nav className="space-y-2">
           {artworks.map((artwork) => (
@@ -30,8 +30,8 @@ export function Sidebar({ activeArtwork }: SidebarProps) {
               className={cn(
                 "w-full text-left px-3 py-2 rounded-md text-sm transition-colors",
                 activeArtwork === artwork.id
-                  ? "bg-blue-100 text-blue-700 font-medium"
-                  : "text-gray-600 hover:text-gray-900 hover:bg-gray-100",
+                  ? "bg-gray-800 text-red-700 font-medium"
+                  : "text-red-100 hover:text-red-200 hover:bg-gray-800",
               )}
             >
               {artwork.title[language]}
@@ -39,14 +39,14 @@ export function Sidebar({ activeArtwork }: SidebarProps) {
           ))}
         </nav>
 
-        <div className="mt-8 pt-8 border-t border-gray-200">
+        {/* <div className="mt-8 pt-8">
           <h3 className="text-sm font-medium text-gray-900 mb-3">{t("about")}</h3>
           <p className="text-sm text-gray-600 leading-relaxed">
             {language === "zh"
               ? "欢迎来到我的艺术世界。这里展示了我的创作历程和艺术探索。"
               : "Welcome to my artistic world. Here you can explore my creative journey and artistic explorations."}
           </p>
-        </div>
+        </div> */}
       </div>
     </aside>
   )

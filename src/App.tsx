@@ -34,14 +34,14 @@ function App() {
   }, [activeArtwork]);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-black text-gray-100">
       <Navbar />
 
       <div className="flex">
         <Sidebar activeArtwork={activeArtwork} />
 
-        <main className="flex-1 p-8">
-          <div className="max-w-5xl mx-auto">
+        <main className="flex-1 pb-8">
+          <div className="max-w-8xl -ml-40 z-1">
             {/* <div className="mb-12 text-center">
               <h1 className="text-4xl font-bold text-gray-900 mb-4">
                 {t("title")}

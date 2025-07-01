@@ -29,7 +29,7 @@ export const artworks: Artwork[] = [
       zh: "魔法世界的经典之作，展现了魔法与友情的力量。",
       en: "A classic of the magical world, showcasing the power of magic and friendship.",
     },
-    image: "/placeholder.svg?height=400&width=600",
+    image: "hp.jpg",
     category: "fantasy",
     year: 2023,
     medium: {
