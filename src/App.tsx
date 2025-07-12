@@ -37,17 +37,25 @@ function App() {
     <div className="min-h-screen bg-black text-gray-100">
       <Navbar />
 
-      <div className="flex">
+      <div className="flex mt-40">
         <Sidebar activeArtwork={activeArtwork} />
 
         <main className="flex-1 pb-8">
-          <div className="max-w-8xl -ml-40 z-1">
+          <div className="max-w-8xl -ml-40 -mt-11 -z-1">
             {/* <div className="mb-12 text-center">
               <h1 className="text-4xl font-bold text-gray-900 mb-4">
                 {t("title")}
               </h1>
               <p className="text-xl text-gray-600">{t("description")}</p>
             </div> */}
+            <div className="relative overflow-hidden">
+              <img
+                src={"cover.png"}
+                alt={"cover"}
+                className="object-cover transition-transform duration-300 mb-12"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-black/100 pointer-events-none w-1/5"></div>
+            </div>
 
             <ArtworkGrid />
           </div>

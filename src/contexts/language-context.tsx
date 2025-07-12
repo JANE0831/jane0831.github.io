@@ -12,6 +12,8 @@ const translations = {
   zh: {
     trajectory: "轨迹",
     interpretation: "作解",
+    explore: "探索",
+    code: "代码",
     language: "语言",
     chinese: "中文",
     english: "English",
@@ -26,6 +28,8 @@ const translations = {
   en: {
     trajectory: "Trajectory",
     interpretation: "Interpretation",
+    explore: "Explore",
+    code: "Code",
     language: "Language",
     chinese: "中文",
     english: "English",

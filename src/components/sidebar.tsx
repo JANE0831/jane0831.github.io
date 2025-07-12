@@ -8,7 +8,7 @@ interface SidebarProps {
 }
 
 export function Sidebar({ activeArtwork }: SidebarProps) {
-  const { language, t } = useLanguage()
+  const { language } = useLanguage()
 
   const scrollToArtwork = (artworkId: string) => {
     const element = document.getElementById(`artwork-${artworkId}`)
@@ -18,19 +18,23 @@ export function Sidebar({ activeArtwork }: SidebarProps) {
   }
 
   return (
-    <aside className="w-64 bg-transparent h-screen sticky top-0 overflow-y-auto z-2">
-      <div className="p-6">
+    <aside className="w-64 bg-transparent h-fit sticky top-30 overflow-y-auto z-2 -mt-20">
+      <div className="py-6">
         {/* <h2 className="text-lg font-semibold text-red-400 mb-4">{t("artworks")}</h2> */}
 
-        <nav className="space-y-2">
-          {artworks.map((artwork) => (
+        <nav className="space-y-1">
+          {artworks
+            .filter((artwork, index, self) => 
+              index === self.findIndex(a => a.id === artwork.id)
+            )
+            .map((artwork) => (
             <button
               key={artwork.id}
               onClick={() => scrollToArtwork(artwork.id)}
               className={cn(
-                "w-full text-left px-3 py-2 rounded-md text-sm transition-colors",
+                "w-full text-left px-3 py-1 rounded-md text-sm transition-colors",
                 activeArtwork === artwork.id
-                  ? "bg-gray-800 text-red-700 font-medium"
+                  ? "text-red-700 font-medium"
                   : "text-red-100 hover:text-red-200 hover:bg-gray-800",
               )}
             >

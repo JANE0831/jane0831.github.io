@@ -7,7 +7,7 @@ export function ArtworkGrid() {
   const { language } = useLanguage();
 
   return (
-    <div className="space-y-12">
+    <div className="space-y-12 mr-20">
       {artworks.map((artwork) => (
         <div
           key={artwork.id}
@@ -15,7 +15,7 @@ export function ArtworkGrid() {
           className="scroll-mt-8"
           data-artwork-id={artwork.id}
         >
-          <Card className="overflow-hidden hover:shadow-lg transition-shadow w-full mx-auto">
+          <Card className="overflow-hidden hover:shadow-lg transition-shadow w-full mx-auto ml-5">
             <CardContent className="p-0">
               <div className="relative overflow-hidden">
                 <img
@@ -26,25 +26,6 @@ export function ArtworkGrid() {
                 <div className="absolute inset-0 bg-gradient-to-r from-black/100 pointer-events-none w-1/5"></div>
               </div>
             </CardContent>
-            {/* <CardFooter className="p-6">
-              <div className="w-full">
-                <h3 className="font-bold text-2xl text-gray-900 mb-2">
-                  {artwork.title[language]}
-                </h3>
-                <p className="text-base text-gray-600 mb-3">
-                  {artwork.medium[language]} • {artwork.year} •{" "}
-                  {artwork.dimensions}
-                </p>
-                <p className="text-base text-gray-700 mb-4 leading-relaxed">
-                  {artwork.description[language]}
-                </p>
-                <a href={`/artwork/${artwork.id}`}>
-                  <Button variant="outline" size="default">
-                    {t("viewDetails")}
-                  </Button>
-                </a>
-              </div>
-            </CardFooter> */}
           </Card>
         </div>
       ))}
