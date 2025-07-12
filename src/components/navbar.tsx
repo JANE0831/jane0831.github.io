@@ -6,7 +6,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 
 export function Navbar() {
@@ -15,38 +15,38 @@ export function Navbar() {
   return (
     <nav className="px-6 pt-4 fixed top-0 left-0 right-0 z-50">
       <div className="flex items-center justify-between">
-        <a href="/">
+        <Link to="/">
           <img src="/logo.png" alt="Logo" className="h-32 w-auto lg:ml-10" />
-        </a>
+        </Link>
 
         <div className="flex items-center space-x-8">
-          <a
-            href="/trajectory"
+          <Link
+            to="/trajectory"
             className="text-red-400 hover:text-red-600 transition-colors"
           >
             {t("trajectory")}
-          </a>
+          </Link>
 
-          <a
-            href="/explore"
+          <Link
+            to="/explore"
             className="text-red-400 hover:text-red-600 transition-colors"
           >
             {t("explore")}
-          </a>
+          </Link>
 
-          <a
-            href="/interpretation"
+          <Link
+            to="/interpretation"
             className="text-red-400 hover:text-red-600 transition-colors"
           >
             {t("interpretation")}
-          </a>
+          </Link>
 
-          <a
-            href="/code"
+          <Link
+            to="/code"
             className="text-red-400 hover:text-red-600 transition-colors"
           >
             {t("code")}
-          </a>
+          </Link>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" className="flex items-center space-x-1">
