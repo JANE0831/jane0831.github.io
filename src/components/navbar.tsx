@@ -16,7 +16,7 @@ export function Navbar() {
     <nav className="px-6 pt-4 fixed top-0 left-0 right-0 z-50">
       <div className="flex items-center justify-between">
         <a href="/">
-          <img src="/logo.png" alt="Logo" className="h-32 w-auto" />
+          <img src="/logo.png" alt="Logo" className="h-32 w-auto lg:ml-10" />
         </a>
 
         <div className="flex items-center space-x-8">

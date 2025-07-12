@@ -19,21 +19,23 @@ export function Sidebar({ activeArtwork }: SidebarProps) {
 
   return (
     <aside className="w-64 bg-transparent h-fit sticky top-30 overflow-y-auto z-2 -mt-20">
-      <div className="py-6">
+      <div className="py-6 lg:pl-12">
         {/* <h2 className="text-lg font-semibold text-red-400 mb-4">{t("artworks")}</h2> */}
 
         <nav className="space-y-1">
           {artworks
             .filter((artwork, index, self) => 
-              index === self.findIndex(a => a.id === artwork.id)
+              index === self.findIndex(a => 
+                a.title[language] === artwork.title[language]
+              )
             )
             .map((artwork) => (
             <button
               key={artwork.id}
               onClick={() => scrollToArtwork(artwork.id)}
               className={cn(
-                "w-full text-left px-3 py-1 rounded-md text-sm transition-colors",
-                activeArtwork === artwork.id
+                "w-full text-left px-3 py-1 rounded-md text-sm transition-colors lg:text-base",
+                activeArtwork === artwork.title[language]
                   ? "text-red-700 font-medium"
                   : "text-red-100 hover:text-red-200 hover:bg-gray-800",
               )}

@@ -92,7 +92,7 @@ export const artworks: Artwork[] = [
     category: "fantasy",
   },
   {
-    id: "7",
+    id: "6",
     title: {
       zh: "其他电影",
       en: "The Yin Yang Master",
@@ -105,7 +105,7 @@ export const artworks: Artwork[] = [
     category: "fantasy",
   },
   {
-    id: "6",
+    id: "8",
     title: {
       zh: "CG 短片",
       en: "Honor of Kings CG",
@@ -118,7 +118,7 @@ export const artworks: Artwork[] = [
     category: "animation",
   },
   {
-    id: "8",
+    id: "9",
     title: {
       zh: "概念设计",
       en: "Lanruosi",
@@ -131,7 +131,7 @@ export const artworks: Artwork[] = [
     category: "horror",
   },
   {
-    id: "8",
+    id: "10",
     title: {
       zh: "概念设计",
       en: "Lanruosi",
