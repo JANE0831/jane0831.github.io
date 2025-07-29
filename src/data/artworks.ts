@@ -9,6 +9,7 @@ export interface Artwork {
     en: string;
   };
   image: string;
+  assets: string[]; // Array of asset URLs (images, videos, etc.)
   category: string;
 }
 
@@ -23,7 +24,8 @@ export const artworks: Artwork[] = [
       zh: "魔法世界的经典之作，展现了魔法与友情的力量。",
       en: "A classic of the magical world, showcasing the power of magic and friendship.",
     },
-    image: "hp.jpg",
+    image: "/hp.jpg",
+    assets: ["/hp.jpg", "/cover.png"],
     category: "fantasy",
   },
   {
@@ -37,6 +39,7 @@ export const artworks: Artwork[] = [
       en: "Depicts the heroic story of soldiers in the Battle of Chosin Reservoir.",
     },
     image: "/cjh.jpg",
+    assets: ["/cjh.jpg", "/cover.png"],
     category: "historical",
   },
   {
@@ -50,6 +53,7 @@ export const artworks: Artwork[] = [
       en: "A modern animated interpretation of traditional Chinese mythology.",
     },
     image: "/bsfs.png",
+    assets: ["/bsfs.png", "/cover.png"],
     category: "animation",
   },
   {
@@ -63,6 +67,7 @@ export const artworks: Artwork[] = [
       en: "Fantasy action film depicting the adventure of hunting monsters.",
     },
     image: "/jglr.gif",
+    assets: ["/jglr.gif", "/cover.png"],
     category: "fantasy",
   },
   {
@@ -76,6 +81,7 @@ export const artworks: Artwork[] = [
       en: "Animated film showcasing the legendary life of Tang Dynasty poet Li Bai.",
     },
     image: "/caswl.png",
+    assets: ["/caswl.png", "/cover.png"],
     category: "animation",
   },
   {
@@ -89,6 +95,7 @@ export const artworks: Artwork[] = [
       en: "Fantasy film telling the mystical story of a Yin Yang Master.",
     },
     image: "/BMB0030-m-V06.jpg",
+    assets: ["/BMB0030-m-V06.jpg", "/cover.png"],
     category: "fantasy",
   },
   {
@@ -102,6 +109,7 @@ export const artworks: Artwork[] = [
       en: "Fantasy film telling the mystical story of a Yin Yang Master.",
     },
     image: "/FSG-0065_m_V03.jpg",
+    assets: ["/FSG-0065_m_V03.jpg", "/cover.png"],
     category: "fantasy",
   },
   {
@@ -115,6 +123,7 @@ export const artworks: Artwork[] = [
       en: "Game-adapted animation showcasing epic battles between heroes.",
     },
     image: "/placeholder.svg?height=400&width=600",
+    assets: ["/placeholder.svg?height=400&width=600", "/cover.png"],
     category: "animation",
   },
   {
@@ -128,6 +137,7 @@ export const artworks: Artwork[] = [
       en: "Horror film revealing mysterious stories in an ancient temple.",
     },
     image: "/gn1.jpeg",
+    assets: ["/gn1.jpeg", "/gn2.png", "/cover.png"],
     category: "horror",
   },
   {
@@ -141,6 +151,7 @@ export const artworks: Artwork[] = [
       en: "Horror film revealing mysterious stories in an ancient temple.",
     },
     image: "/gn2.png",
+    assets: ["/gn2.png", "/gn1.jpeg", "/cover.png"],
     category: "horror",
   },
 ];
